@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Online Course Registration Form">
+  <title>Course Registration</title>
+</head>
+<body>
+  <header>
+    <h1>Online Course Registration Form</h1>
+  </header>
+
+  <main>
+    <form action="/submit-registration" method="POST" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name"><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="example@email.com"><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+91XXXXXXXXXX"><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <label for="photo">Profile Picture:</label>
+        <input type="file" id="photo" name="photo" accept="image/*"><br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Academic Background</legend>
+        <label for="level">Current Education Level:</label>
+        <select id="level" name="level">
+          <option>High School</option>
+          <option>Bachelor's</option>
+          <option>Master's</option>
+          <option>PhD</option>
+        </select><br><br>
+
+        <label for="field">Field of Study:</label>
+        <input type="text" id="field" name="field" placeholder="e.g., Computer Science"><br><br>
+
+        <label for="exp">Years of Programming Experience:</label>
+        <input type="number" id="exp" name="exp" min="0" max="20"><br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Course Preferences</legend>
+        <p>Preferred Learning Mode:</p>
+        <label><input type="radio" name="mode" value="Online"> Online</label>
+        <label><input type="radio" name="mode" value="Offline"> Offline</label>
+        <label><input type="radio" name="mode" value="Hybrid"> Hybrid</label><br><br>
+
+        <p>Course Categories:</p>
+        <label><input type="checkbox" name="category" value="Web Development"> Web Development</label>
+        <label><input type="checkbox" name="category" value="Data Science"> Data Science</label>
+        <label><input type="checkbox" name="category" value="AI/ML"> AI/ML</label><br><br>
+
+        <p>Preferred Schedule:</p>
+        <label><input type="radio" name="schedule" value="Weekdays"> Weekdays</label>
+        <label><input type="radio" name="schedule" value="Weekends"> Weekends</label>
+        <label><input type="radio" name="schedule" value="Flexible"> Flexible</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+        <label for="level">Programming Experience Level (1-10):</label>
+        <input type="range" id="level" name="experience" min="1" max="10"><br><br>
+
+        <label for="comments">Special Requirements / Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4"></textarea><br><br>
+
+        <p>Preferred Contact Method:</p>
+        <label><input type="radio" name="contact" value="Email"> Email</label>
+        <label><input type="radio" name="contact" value="Phone"> Phone</label>
+        <label><input type="radio" name="contact" value="SMS"> SMS</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Terms & Conditions</legend>
+        <label><input type="checkbox" name="terms" required> I agree to the Terms and Conditions</label><br>
+        <label><input type="checkbox" name="newsletter"> I want to receive newsletters</label>
+      </fieldset>
+
+      <br>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Online Learning Platform</p>
+  </footer>
+</body>
+</html>
